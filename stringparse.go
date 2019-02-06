@@ -13,5 +13,8 @@ func main() {
 
 	fmt.Printf("textPtr: %s, metricPtr: %s, uniquePtr: %t\n", *textPtr, *metricPtr, *uniquePtr)
 
-	// Execution of CLI tool behavior goes here
+	// Prints out arguments that come *after* flags
+	for i, f := range flag.Args() {
+		fmt.Printf("Arg %d %s\n", i, f)
+	}
 }
